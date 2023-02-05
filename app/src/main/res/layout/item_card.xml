@@ -6,6 +6,7 @@
     android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_card"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -69,9 +70,13 @@
 
             <TextView
                 android:id="@+id/tv_card_id"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:layout_marginEnd="@dimen/card_view_inside_margin"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@android:color/holo_orange_dark"
                 app:layout_constraintBaseline_toBaselineOf="@id/tv_card_id_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv_card_id_title"
@@ -165,6 +170,7 @@
                 android:layout_marginStart="@dimen/card_view_inside_margin"
                 android:layout_marginEnd="@dimen/card_view_inside_margin"
                 android:layout_marginBottom="@dimen/card_view_inside_margin"
+                android:textColor="@color/material_dynamic_primary60"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

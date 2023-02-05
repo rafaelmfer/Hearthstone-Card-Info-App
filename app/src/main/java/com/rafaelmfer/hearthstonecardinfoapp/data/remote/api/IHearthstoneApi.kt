@@ -14,4 +14,9 @@ interface IHearthstoneApi {
     suspend fun getCardsByClass(
         @Path("playerClass") playerClass: String
     ): List<CardResponse>
+
+    @GET("cards/{cardId}")
+    suspend fun getSingleCard(
+        @Path("cardId") cardId: String
+    ): List<CardResponse>
 }

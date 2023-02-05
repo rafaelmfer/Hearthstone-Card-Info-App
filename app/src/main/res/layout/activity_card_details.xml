@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_card_name"
+            style="@style/H1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="@dimen/screen_margin_vertical"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Overclocked" />
+
+        <ImageView
+            android:id="@+id/iv_card_image"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="true"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_name"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_card_id_title"
+            style="@style/H3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/card_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_card_image" />
+
+        <TextView
+            android:id="@+id/tv_card_id"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/card_view_inside_margin"
+            android:gravity="end"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_card_id_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_card_id_title"
+            tools:text="RLK_057" />
+
+        <TextView
+            android:id="@+id/tv_card_set_title"
+            style="@style/H3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:text="@string/card_set"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_id_title" />
+
+        <TextView
+            android:id="@+id/tv_card_set"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:gravity="end"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_card_set_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_card_set_title"
+            tools:text="The Grand Tournament" />
+
+        <TextView
+            android:id="@+id/tv_card_faction_title"
+            style="@style/H3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/faction"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_set_title" />
+
+        <TextView
+            android:id="@+id/tv_card_faction"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/card_view_inside_margin"
+            android:gravity="end"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_card_faction_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_card_faction_title"
+            tools:text="215346" />
+
+        <TextView
+            android:id="@+id/tv_card_rarity_title"
+            style="@style/H3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/rarity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_faction_title" />
+
+        <TextView
+            android:id="@+id/tv_card_rarity"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/card_view_inside_margin"
+            android:gravity="end"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_card_rarity_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_card_rarity_title"
+            tools:text="Common" />
+
+        <TextView
+            android:id="@+id/tv_player_class_title"
+            style="@style/H3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:text="@string/player_class"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_rarity_title" />
+
+        <TextView
+            android:id="@+id/tv_player_class"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:gravity="end"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_player_class_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_player_class_title"
+            tools:text="Mage" />
+
+        <TextView
+            android:id="@+id/tv_type_title"
+            style="@style/H3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:text="@string/type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_player_class_title" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:gravity="end"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_type_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_type_title"
+            tools:text="Spell" />
+
+        <TextView
+            android:id="@+id/tv_card_cost_title"
+            style="@style/H3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/cost"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_type_title" />
+
+        <TextView
+            android:id="@+id/tv_card_cost"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/card_view_inside_margin"
+            android:gravity="end"
+            android:textColor="@android:color/holo_orange_dark"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_card_cost_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_card_cost_title"
+            tools:text="325352" />
+
+        <TextView
+            android:id="@+id/tv_card_attack_title"
+            style="@style/H3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/attack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_cost_title" />
+
+        <TextView
+            android:id="@+id/tv_card_attack"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/card_view_inside_margin"
+            android:gravity="end"
+            android:textColor="@android:color/holo_orange_dark"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_card_attack_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_card_attack_title"
+            tools:text="215346" />
+
+        <TextView
+            android:id="@+id/tv_card_health_title"
+            style="@style/H3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/health"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_attack_title" />
+
+        <TextView
+            android:id="@+id/tv_card_health"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/card_view_inside_margin"
+            android:gravity="end"
+            android:textColor="@android:color/holo_orange_dark"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_card_health_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_card_health_title"
+            tools:text="215346" />
+
+        <TextView
+            android:id="@+id/tv_card_flavor_title"
+            style="@style/H3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/flavor"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_health_title" />
+
+        <TextView
+            android:id="@+id/tv_card_flavor"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:textColor="@color/material_dynamic_primary60"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_flavor_title"
+            tools:text="The Northrend Arm Wrestling Championship just found its new champion." />
+
+        <TextView
+            android:id="@+id/tv_text_title"
+            style="@style/H3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:text="@string/text"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_flavor" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:layout_marginBottom="@dimen/screen_margin_vertical"
+            android:textColor="@color/material_dynamic_primary60"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_text_title"
+            app:layout_constraintVertical_bias="0"
+            tools:text="He was surprised to learn that he's only a league away from dinner!" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_card_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tv_card_name, iv_card_image, tv_card_id, tv_card_id_title, tv_card_set, tv_card_set_title, tv_card_faction,
+tv_card_faction_title, tv_card_rarity, tv_card_rarity_title, tv_player_class_title, tv_player_class, tv_type, tv_type_title, tv_card_cost,
+tv_card_cost_title, tv_card_attack, tv_card_attack_title, tv_card_health, tv_card_health_title, tv_card_flavor, tv_card_flavor_title, tv_text, tv_text_title"
+            tools:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/pb_card_details"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:indeterminateTint="@android:color/holo_blue_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_card_error"
+            style="@style/H2Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="An error occurred, please try again later" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

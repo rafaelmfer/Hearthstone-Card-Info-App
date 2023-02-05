@@ -8,13 +8,16 @@
         android:name="com.rafaelmfer.hearthstonecardinfoapp.HearthstoneCardInfoApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.HearthstoneCardInfoApp"
-        tools:targetApi="31">
-
+        tools:targetApi="tiramisu">
+        <activity
+            android:name="com.rafaelmfer.hearthstonecardinfoapp.presentation.carddetails.CardDetailsActivity"
+            android:exported="false" />
         <activity
             android:name="com.rafaelmfer.hearthstonecardinfoapp.presentation.MainActivity"
             android:exported="true">
