@@ -2,6 +2,7 @@ package com.rafaelmfer.hearthstonecardinfoapp.data.repository
 
 import com.rafaelmfer.hearthstonecardinfoapp.data.remote.api.IHearthstoneApi
 import com.rafaelmfer.hearthstonecardinfoapp.domain.mapper.asDomainModel
+import com.rafaelmfer.hearthstonecardinfoapp.domain.model.CardModel
 import com.rafaelmfer.hearthstonecardinfoapp.domain.model.CardsInfoModel
 import com.rafaelmfer.hearthstonecardinfoapp.domain.repository.IHearthstoneRepository
 import kotlinx.coroutines.Dispatchers
@@ -27,6 +28,20 @@ class HearthstoneRepository(
             try {
                 val response = iHearthstoneApi.getCardsInfo()
                 State.Success(response.asDomainModel())
+            } catch (ex: IOException) {
+                // Network Error
+                State.Error(message = ex.localizedMessage)
+            } catch (ex: Exception) {
+                State.Error(message = ex.localizedMessage)
+            }
+        }
+    }
+
+    override suspend fun getCardsByClass(playerClass: String): State<List<CardModel>> {
+        return withContext(Dispatchers.IO) {
+            try {
+                val response = iHearthstoneApi.getCardsByClass(playerClass)
+                State.Success(response.map { it.asDomainModel() })
             } catch (ex: IOException) {
                 // Network Error
                 State.Error(message = ex.localizedMessage)

@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.rafaelmfer.hearthstonecardinfoapp.data.repository.State
+import com.rafaelmfer.hearthstonecardinfoapp.domain.model.CardModel
 import com.rafaelmfer.hearthstonecardinfoapp.domain.model.CardsInfoModel
 import com.rafaelmfer.hearthstonecardinfoapp.domain.repository.IHearthstoneRepository
 import kotlinx.coroutines.launch
@@ -15,6 +16,9 @@ class MainViewModel(
 
     private val cardsInfoMutableLiveData = MutableLiveData<State<CardsInfoModel>>()
     val cardsInfoLiveData: LiveData<State<CardsInfoModel>> get() = cardsInfoMutableLiveData
+
+    private val cardsMutableLiveData = MutableLiveData<State<List<CardModel>>>()
+    val cardsLiveData: LiveData<State<List<CardModel>>> get() = cardsMutableLiveData
 
     init {
         getAllCards()
@@ -28,6 +32,18 @@ class MainViewModel(
                 cardsInfoMutableLiveData.postValue(result)
             } catch (ex: Exception) {
                 cardsInfoMutableLiveData.postValue(State.Error(ex.localizedMessage))
+            }
+        }
+    }
+
+    fun getCardsByClasses(playerClass: String) {
+        cardsMutableLiveData.postValue(State.Loading)
+        viewModelScope.launch {
+            try {
+                val result = repository.getCardsByClass(playerClass)
+                cardsMutableLiveData.postValue(result)
+            } catch (ex: Exception) {
+                cardsMutableLiveData.postValue(State.Error(ex.localizedMessage))
             }
         }
     }
