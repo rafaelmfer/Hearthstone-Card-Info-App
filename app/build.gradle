@@ -4,6 +4,8 @@ plugins {
     id "androidx.navigation.safeargs.kotlin"
 }
 
+def API_KEY = "INPUT_YOUR_API_KEY_HERE"
+
 android {
     namespace "com.rafaelmfer.heartstonecardinfoapp"
     compileSdk 33
@@ -16,6 +18,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "API_KEY", "\"$API_KEY\""
     }
 
     buildTypes {
