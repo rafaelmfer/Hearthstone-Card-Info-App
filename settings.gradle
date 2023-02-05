@@ -1,0 +1,2 @@
+rootProject.name = "HearthstoneCardInfoApp"
+include ':app'
