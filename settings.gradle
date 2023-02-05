@@ -1,2 +1,3 @@
 rootProject.name = "HearthstoneCardInfoApp"
 include ':app'
+include ':commons'

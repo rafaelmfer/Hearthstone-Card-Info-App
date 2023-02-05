@@ -1,20 +1,18 @@
 plugins {
-    id "com.android.application"
+    id "com.android.library"
     id "org.jetbrains.kotlin.android"
 }
 
 android {
-    namespace "com.rafaelmfer.heartstonecardinfoapp"
+    namespace "com.rafaelmfer.commons"
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.rafaelmfer.heartstonecardinfoapp"
         minSdk 24
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -23,23 +21,22 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
     }
-
+    
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
+    
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
+    
     viewBinding {
         enabled true
     }
 }
 
 dependencies {
-    implementation project(":commons")
 
     implementation "androidx.core:core-ktx:1.9.0"
     implementation "androidx.appcompat:appcompat:1.6.0"
