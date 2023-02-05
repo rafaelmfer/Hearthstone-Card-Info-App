@@ -7,4 +7,5 @@ import com.rafaelmfer.hearthstonecardinfoapp.domain.model.CardsInfoModel
 interface IHearthstoneRepository {
     suspend fun getCardsInfo(): State<CardsInfoModel>
     suspend fun getCardsByClass(playerClass: String): State<List<CardModel>>
+    suspend fun getSingleCard(cardId: String): State<List<CardModel>>
 }

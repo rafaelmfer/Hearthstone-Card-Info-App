@@ -1,6 +1,7 @@
 package com.rafaelmfer.hearthstonecardinfoapp.domain.model
 
 class CardModel(
+    val cardId: String,
     val dbfId: Int,
     val img: String?,
     val name: String,

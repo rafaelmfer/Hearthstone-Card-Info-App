@@ -8,6 +8,7 @@ import com.rafaelmfer.hearthstonecardinfoapp.domain.model.LocalesModel
 
 fun CardResponse.asDomainModel() =
     CardModel(
+        cardId = cardId,
         dbfId = dbfId,
         img = img,
         name = name,

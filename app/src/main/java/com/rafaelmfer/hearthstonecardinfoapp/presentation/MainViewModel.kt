@@ -41,7 +41,14 @@ class MainViewModel(
         viewModelScope.launch {
             try {
                 val result = repository.getCardsByClass(playerClass)
-                cardsMutableLiveData.postValue(result)
+                cardsMutableLiveData.postValue(
+                    State.Success(
+                        (result as State.Success).model
+                            .filter {
+                                it.img != null
+                            }
+                    )
+                )
             } catch (ex: Exception) {
                 cardsMutableLiveData.postValue(State.Error(ex.localizedMessage))
             }

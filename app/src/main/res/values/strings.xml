@@ -6,7 +6,7 @@
     <string name="name">Name:</string>
     <string name="flavor">Flavor:</string>
     <string name="type">Type:</string>
-    <string name="text">Description</string>
+    <string name="text">Description:</string>
     <string name="player_class">Class:</string>
     <string name="faction">Faction:</string>
     <string name="rarity">Rarity:</string>

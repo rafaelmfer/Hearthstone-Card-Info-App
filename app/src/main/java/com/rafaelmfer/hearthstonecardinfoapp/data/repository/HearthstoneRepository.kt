@@ -50,4 +50,18 @@ class HearthstoneRepository(
             }
         }
     }
+
+    override suspend fun getSingleCard(cardId: String): State<List<CardModel>> {
+        return withContext(Dispatchers.IO) {
+            try {
+                val response = iHearthstoneApi.getSingleCard(cardId)
+                State.Success(response.map { it.asDomainModel() })
+            } catch (ex: IOException) {
+                // Network Error
+                State.Error(message = ex.localizedMessage)
+            } catch (ex: Exception) {
+                State.Error(message = ex.localizedMessage)
+            }
+        }
+    }
 }
