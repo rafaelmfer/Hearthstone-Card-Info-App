@@ -1,8 +1,27 @@
 package com.rafaelmfer.hearthstonecardinfoapp.domain.mapper
 
+import com.rafaelmfer.hearthstonecardinfoapp.data.remote.response.CardResponse
 import com.rafaelmfer.hearthstonecardinfoapp.data.remote.response.CardsInfoResponse
+import com.rafaelmfer.hearthstonecardinfoapp.domain.model.CardModel
 import com.rafaelmfer.hearthstonecardinfoapp.domain.model.CardsInfoModel
 import com.rafaelmfer.hearthstonecardinfoapp.domain.model.LocalesModel
+
+fun CardResponse.asDomainModel() =
+    CardModel(
+        dbfId = dbfId,
+        img = img,
+        name = name,
+        flavor = flavor,
+        cardSet = cardSet,
+        playerClass = playerClass,
+        type = type,
+        text = text,
+        faction = faction,
+        rarity = rarity,
+        attack = attack,
+        cost = cost,
+        health = health
+    )
 
 fun CardsInfoResponse.asDomainModel() =
     CardsInfoModel(

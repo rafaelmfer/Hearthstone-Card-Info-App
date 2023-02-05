@@ -7,10 +7,13 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/mbt_name"
+        style="@style/Button.Material.Primary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/screen_margin_horizontal"
-        android:layout_marginEnd="@dimen/screen_margin_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
