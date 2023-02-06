@@ -1,5 +1,6 @@
 package com.rafaelmfer.hearthstonecardinfoapp.presentation
 
+import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -24,7 +25,8 @@ class MainViewModel(
         getAllCards()
     }
 
-    private fun getAllCards() {
+    @VisibleForTesting
+    fun getAllCards() {
         cardsInfoMutableLiveData.postValue(State.Loading)
         viewModelScope.launch {
             try {
