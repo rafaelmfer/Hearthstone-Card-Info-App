@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">HearthstoneCardInfoApp</string>
+    <string name="app_name">Hearthstone Card Info App</string>
+
+    <string name="card_id">Id:</string>
+    <string name="card_set">Card Set:</string>
+    <string name="name">Name:</string>
+    <string name="flavor">Flavor:</string>
+    <string name="type">Type:</string>
+    <string name="text">Description:</string>
+    <string name="player_class">Class:</string>
+    <string name="faction">Faction:</string>
+    <string name="rarity">Rarity:</string>
+    <string name="attack">Attack:</string>
+    <string name="cost">Cost:</string>
+    <string name="health">Health:</string>
+
+    <string name="no_information">no information</string>
+    <string name="instructions_to_get_cards">choose one of the classes from the carousel above to search for the cards of that class</string>
 </resources>
