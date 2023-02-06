@@ -1,6 +1,6 @@
 package com.rafaelmfer.hearthstonecardinfoapp.data.network
 
-import com.rafaelmfer.heartstonecardinfoapp.BuildConfig
+import com.rafaelmfer.hearthstonecardinfoapp.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

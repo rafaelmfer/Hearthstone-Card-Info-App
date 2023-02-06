@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.rafaelmfer.commons.extensions.onSingleClick
+import com.rafaelmfer.hearthstonecardinfoapp.R
+import com.rafaelmfer.hearthstonecardinfoapp.databinding.ItemCardBinding
 import com.rafaelmfer.hearthstonecardinfoapp.domain.model.CardModel
 import com.rafaelmfer.hearthstonecardinfoapp.presentation.carddetails.CardDetailsActivity
-import com.rafaelmfer.heartstonecardinfoapp.R
-import com.rafaelmfer.heartstonecardinfoapp.databinding.ItemCardBinding
 
 class CardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
