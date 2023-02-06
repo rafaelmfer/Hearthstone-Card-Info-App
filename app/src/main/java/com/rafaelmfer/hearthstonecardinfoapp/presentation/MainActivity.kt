@@ -7,9 +7,9 @@ import com.rafaelmfer.commons.extensions.gone
 import com.rafaelmfer.commons.extensions.viewBinding
 import com.rafaelmfer.commons.extensions.visible
 import com.rafaelmfer.hearthstonecardinfoapp.data.repository.State
+import com.rafaelmfer.hearthstonecardinfoapp.databinding.ActivityMainBinding
 import com.rafaelmfer.hearthstonecardinfoapp.domain.model.CardModel
 import com.rafaelmfer.hearthstonecardinfoapp.domain.model.CardsInfoModel
-import com.rafaelmfer.heartstonecardinfoapp.databinding.ActivityMainBinding
 import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
