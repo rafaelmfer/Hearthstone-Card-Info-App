@@ -12,11 +12,11 @@ import com.rafaelmfer.commons.extensions.gone
 import com.rafaelmfer.commons.extensions.onSingleClick
 import com.rafaelmfer.commons.extensions.viewBinding
 import com.rafaelmfer.commons.extensions.visible
+import com.rafaelmfer.hearthstonecardinfoapp.R
 import com.rafaelmfer.hearthstonecardinfoapp.data.repository.State
+import com.rafaelmfer.hearthstonecardinfoapp.databinding.ActivityCardDetailsBinding
 import com.rafaelmfer.hearthstonecardinfoapp.domain.model.CardModel
 import com.rafaelmfer.hearthstonecardinfoapp.util.INTENT_PARAM_CARD_ID
-import com.rafaelmfer.heartstonecardinfoapp.R
-import com.rafaelmfer.heartstonecardinfoapp.databinding.ActivityCardDetailsBinding
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
 

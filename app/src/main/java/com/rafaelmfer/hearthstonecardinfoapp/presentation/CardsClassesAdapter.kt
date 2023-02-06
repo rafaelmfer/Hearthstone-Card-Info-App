@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.rafaelmfer.commons.extensions.onSingleClick
-import com.rafaelmfer.heartstonecardinfoapp.databinding.ItemCardClassesBinding
+import com.rafaelmfer.hearthstonecardinfoapp.databinding.ItemCardClassesBinding
 
 class CardsClassesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 

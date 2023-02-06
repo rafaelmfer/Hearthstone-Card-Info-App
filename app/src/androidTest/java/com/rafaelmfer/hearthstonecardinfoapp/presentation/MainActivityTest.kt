@@ -15,6 +15,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
+import com.rafaelmfer.hearthstonecardinfoapp.R
 import com.rafaelmfer.hearthstonecardinfoapp.data.network.HTTPClient
 import com.rafaelmfer.hearthstonecardinfoapp.data.remote.api.IHearthstoneApi
 import com.rafaelmfer.hearthstonecardinfoapp.data.repository.HearthstoneRepository
@@ -22,7 +23,6 @@ import com.rafaelmfer.hearthstonecardinfoapp.domain.repository.IHearthstoneRepos
 import com.rafaelmfer.hearthstonecardinfoapp.presentation.carddetails.CardDetailsActivity
 import com.rafaelmfer.hearthstonecardinfoapp.presentation.carddetails.CardDetailsViewModel
 import com.rafaelmfer.hearthstonecardinfoapp.util.RecyclerViewMatcher
-import com.rafaelmfer.heartstonecardinfoapp.R
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
